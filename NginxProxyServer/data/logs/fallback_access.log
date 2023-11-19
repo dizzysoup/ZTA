@@ -1,0 +1,6 @@
+[16/Nov/2023:10:44:55 +0000] 400 - - http localhost "-" [Client 172.28.0.1] [Length 154] [Gzip -] "-" "-"
+[16/Nov/2023:14:03:58 +0000] 400 - - http localhost "-" [Client 172.28.0.1] [Length 154] [Gzip -] "-" "-"
+[16/Nov/2023:14:12:37 +0000] 400 - GET http 140.125.178.114 "/" [Client 172.28.0.1] [Length 654] [Gzip -] "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36" "-"
+[16/Nov/2023:14:21:58 +0000] 400 - GET http 140.125.178.114 "/" [Client 172.28.0.1] [Length 654] [Gzip -] "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36" "-"
+[16/Nov/2023:14:34:03 +0000] 400 - GET http 140.125.178.114 "/" [Client 172.28.0.1] [Length 654] [Gzip -] "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36" "-"
+[16/Nov/2023:19:14:09 +0000] 400 - GET http 140.125.178.114 "/" [Client 172.28.0.1] [Length 252] [Gzip -] "-" "-"

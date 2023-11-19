@@ -32,7 +32,7 @@ function LoginPage(){
        
         const account = document.getElementById("account").value
         const password = document.getElementById("password").value
-        const secret = "rqETQIbEcniULykTP0BFF3OBQn92QuDl"
+        const secret = "2M0ygtC7zjUocADNjmAxvUMTAUNriK5y"
         // 登入需求
         const url = "http://www.envzta.com:1338/realms/react-keycloak/protocol/openid-connect/token"
         console.log(url);

@@ -17,7 +17,7 @@ function HomePage(){
     const access_token =  location.state == null ? null :  location.state.token.access_token;
     const refresh_token = location.state == null ? null : location.state.token.refresh_token;
 
-    const secret = "rqETQIbEcniULykTP0BFF3OBQn92QuDl"
+    const secret = "2M0ygtC7zjUocADNjmAxvUMTAUNriK5y"
     
     useEffect(()=> {
         if(location.state == null ){
