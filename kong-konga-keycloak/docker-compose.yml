@@ -88,6 +88,7 @@ services:
 
   keycloak:
     image: quay.io/keycloak/keycloak:17.0.0
+    cpmmand: -c standalone.xml
     container_name: keycloak
     depends_on:
       - keycloak-db
@@ -96,6 +97,7 @@ services:
       - keycloak-net
     ports:
       - "8180:8080"
+      - "8443:8443"
     environment:
       DB_VENDOR:   POSTGRES
       DB_ADDR:     keycloak-db
