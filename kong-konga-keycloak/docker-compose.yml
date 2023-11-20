@@ -96,7 +96,7 @@ services:
       - keycloak-net
     ports:
       - "8180:8080"
-      - "8443:8443"
+      - "9443:8443"
     environment:
       DB_VENDOR:   POSTGRES
       DB_ADDR:     keycloak-db
