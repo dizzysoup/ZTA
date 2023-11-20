@@ -9,13 +9,8 @@ RUN npm ci
 RUN npm run build
 
 FROM nginx:1.23.2-alpine
-RUN mkdir -p /etc/nginx/ssl
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/build /usr/share/nginx/html
-COPY server.crt /etc/nginx/ssl/server.crt
-COPY server.key /etc/nginx/ssl/server.key
-RUN chmod 600 /etc/nginx/ssl/server.key
-RUN chown 600 /etc/nginx/ssl/server.crt
 RUN apk update
 RUN apk add openrc
 RUN touch /var/run/nginx.pid
