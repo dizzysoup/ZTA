@@ -88,15 +88,14 @@ services:
 
   keycloak:
     image: quay.io/keycloak/keycloak:17.0.0
-    command: -c standalone.xml
     container_name: keycloak
     depends_on:
-      - keycloak-db    
+      - keycloak-db
+    command: start-dev
     networks:
       - keycloak-net
     ports:
       - "8180:8080"
-      - "9443:8443"
     environment:
       DB_VENDOR:   POSTGRES
       DB_ADDR:     keycloak-db
