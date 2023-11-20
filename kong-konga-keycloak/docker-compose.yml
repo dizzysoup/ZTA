@@ -91,8 +91,7 @@ services:
     command: -c standalone.xml
     container_name: keycloak
     depends_on:
-      - keycloak-db
-    command: start-dev
+      - keycloak-db    
     networks:
       - keycloak-net
     ports:
