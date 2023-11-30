@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
-import { Text,Stack,Button, useToast } from '@chakra-ui/react';
-import { Base64 } from "js-base64";
+import { Text,Stack,Button, useToast  } from '@chakra-ui/react';
+
 import { useLocation,useNavigate } from "react-router-dom";
 
 
@@ -17,7 +17,7 @@ function HomePage(){
     const access_token =  location.state == null ? null :  location.state.token.access_token;
     const refresh_token = location.state == null ? null : location.state.token.refresh_token;
 
-    const secret = "2M0ygtC7zjUocADNjmAxvUMTAUNriK5y"
+    const secret = "IbF0O2eE2HxhienjlVGa9j9PrNvLwoo8"
     
     useEffect(()=> {
         if(location.state == null ){
@@ -35,8 +35,9 @@ function HomePage(){
         }
     },[])
    
+    //憑證驗證
     const introspect_Id = () => {
-        const url = "http://www.envzta.com:1338/realms/react-keycloak/protocol/openid-connect/token/introspect"
+        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token/introspect"
         const formData = new URLSearchParams();
         formData.append("token",access_token);
         formData.append("client_id","reactClient");
@@ -60,9 +61,38 @@ function HomePage(){
         }) 
     }
 
-    const OnHandleBtnClick = () => {
+    // 資源token 
+    const OnHandleBtnClick = (param) => {
         introspect_Id()
+
        
+        const url = `https://kong.ztasecurity.duckdns.org/${param}/realms/param/protocol/openid-connect/token`
+        console.log(url);        
+        const formData = new URLSearchParams();
+        formData.append("grant_type","password");
+        formData.append("client_id",param);
+        formData.append("username",account);
+        formData.append("password",password);
+        formData.append("client_secret",secret);
+
+        fetch(url,{
+            method:"POST",
+            headers : { 'Content-Type' : 'application/x-www-form-urlencoded'},
+            body : formData.toString()
+        }).then(res => res.json())
+        .then(res => {
+            if(res["error"] === "invalid_grant"){
+                toast({title:"獲取失敗",position: positions, isClosable : true,status:'error'})
+            }else { 
+                toast({title:"獲取成功",position: positions, isClosable : true,status:'success'})
+            }
+        })
+        .catch(e => 
+            toast({title:"獲取失敗",position: positions, isClosable : true,status:'error'})
+        )
+        
+        
+        /*
         const requestOptions = {
             method: 'POST',
             headers : {'Content-Type':'application/json'},
@@ -73,10 +103,11 @@ function HomePage(){
             .then(res => res.text())
             .then(res => document.body.innerHTML = res)
             .catch(e => console.error(e))    
+        */
     }
-
+    // 登出
     const OnHandleBtnClick_out = () => {
-        const url = "http://www.envzta.com:1338/realms/react-keycloak/protocol/openid-connect/logout"
+        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
         const formData = new URLSearchParams();
         formData.append("refresh_token",refresh_token);
         formData.append("client_id","reactClient");
@@ -104,7 +135,10 @@ function HomePage(){
         <>
             <Stack width="100%" h="100%" align="center" spacing={4}>
                 <Text fontSize={100}> WELCOME! </Text>
-                <Button onClick={OnHandleBtnClick}>獲取資源</Button>  
+                <Stack direction={['column','row']} spacing='10px' >
+                    <Button onClick={() => OnHandleBtnClick("resource1")}>獲取資源1</Button>
+                    <Button  onClick={() => OnHandleBtnClick("resource2")}>獲取資源2</Button>  
+                </Stack>                
                 <Button onClick={OnHandleBtnClick_out}>登出</Button>                  
             </Stack>
         </>

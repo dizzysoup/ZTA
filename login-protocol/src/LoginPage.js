@@ -1,8 +1,8 @@
-import React,{useEffect, useState} from "react";
+import React,{useContext} from "react";
 import { Text,Stack,Button, Flex ,Input } from '@chakra-ui/react';
 import { useToast } from "@chakra-ui/react";
 import  {keycloak} from './keycloak' ;
-import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -10,31 +10,14 @@ function LoginPage(){
     const toast = useToast();
     const positions = ['top-right']
     const nav = useNavigate();
-
-    const BtnClickEvent_Route = () => {        
-        keycloak.init({ 
-            onLoad: 'login-required',
-            redirectUri : 'http://www.envzta:8080/'
-        }).then((auth) => {
-            if (!auth) {
-                window.location.reload();
-            } else {
-                console.log(keycloak.token)
-                console.info("Authenticated");
-            }
-        }).catch(() => {
-            console.error("Authenticated Failed");
-        });
-        
-    }
-
+ 
     const BtnClickEvent = () => {
        
         const account = document.getElementById("account").value
         const password = document.getElementById("password").value
-        const secret = "2M0ygtC7zjUocADNjmAxvUMTAUNriK5y"
+        const secret = "IbF0O2eE2HxhienjlVGa9j9PrNvLwoo8"
         // 登入需求
-        const url = "http://www.envzta.com:1338/realms/react-keycloak/protocol/openid-connect/token"
+        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token"
         console.log(url);
         const formData = new URLSearchParams();
         formData.append("grant_type","password");
@@ -69,11 +52,6 @@ function LoginPage(){
         .then(res => console.log(res))
         .catch(e => console.error(e))
         */
-    }
-
-    const BtnClickEvent_OTP = () => {
-        const account = document.getElementById("account").value
-        const password = document.getElementById("password").value
     }
 
     return (
