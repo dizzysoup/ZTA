@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import { Text,Stack,Button, useToast  } from '@chakra-ui/react';
-
+import {jwtDecode} from 'jwt-decode';
 import { useLocation,useNavigate } from "react-router-dom";
 
 
