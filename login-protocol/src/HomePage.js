@@ -1,8 +1,8 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import { Text,Stack,Button, useToast  } from '@chakra-ui/react';
 import {jwtDecode} from 'jwt-decode';
 import { useLocation,useNavigate } from "react-router-dom";
-
+import AuthContext from "./AuthContext";
 
 
 
@@ -16,8 +16,11 @@ function HomePage(){
 
     const access_token =  location.state == null ? null :  location.state.token.access_token;
     const refresh_token = location.state == null ? null : location.state.token.refresh_token;
+    const {account , Setaccount} = useContext(AuthContext);
+    const {password , Setpassword} = useContext(AuthContext);
 
-    const secret = "IbF0O2eE2HxhienjlVGa9j9PrNvLwoo8"
+    const secret = process.env.REACT_APP_KEYCLOAK_TOKE;
+    
     
     useEffect(()=> {
         if(location.state == null ){
@@ -64,7 +67,6 @@ function HomePage(){
     // 資源token 
     const OnHandleBtnClick = (param) => {
         introspect_Id()
-
        
         const url = `https://kong.ztasecurity.duckdns.org/${param}/realms/param/protocol/openid-connect/token`
         console.log(url);        
@@ -74,6 +76,8 @@ function HomePage(){
         formData.append("username",account);
         formData.append("password",password);
         formData.append("client_secret",secret);
+
+        
 
         fetch(url,{
             method:"POST",
@@ -134,7 +138,8 @@ function HomePage(){
     return (
         <>
             <Stack width="100%" h="100%" align="center" spacing={4}>
-                <Text fontSize={100}> WELCOME! </Text>
+                <Text fontSize={50}> {account} </Text>
+                <Text fontSize={100}> WELCOME! </Text>                
                 <Stack direction={['column','row']} spacing='10px' >
                     <Button onClick={() => OnHandleBtnClick("resource1")}>獲取資源1</Button>
                     <Button  onClick={() => OnHandleBtnClick("resource2")}>獲取資源2</Button>  
