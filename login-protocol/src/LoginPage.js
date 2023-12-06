@@ -19,7 +19,7 @@ function LoginPage(){
         Setaccount(document.getElementById("account").value)
         Setpassword(document.getElementById("password").value)
 
-        const secret = process.env.REACT_APP_KEYCLOAK_TOKE;
+        const secret = 'vzZhAt3Hk7d0bEBc6If7b2OF5WCiD6Yr';
         console.log(secret);
         // 登入需求
         const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token"
@@ -30,7 +30,7 @@ function LoginPage(){
         formData.append("username",account);
         formData.append("password",password);
         formData.append("client_secret",secret);
-
+        console.log(formData);
         fetch(url,{
             method:"POST",
             headers : { 'Content-Type' : 'application/x-www-form-urlencoded'},
@@ -65,8 +65,7 @@ function LoginPage(){
                 <Text fontSize={100}> LOGIN </Text>
                 <Flex align="center"><Text fontSize={20}>帳號：</Text><Input type="text" w={300} id="account" /></Flex>
                 <Flex align="center"><Text fontSize={20}>密碼：</Text><Input type="password" w={300} id="password" /></Flex>                
-                <Button onClick={BtnClickEvent}>帳號密碼(check sso)</Button>         
-                <Text> 155 </Text>       
+                <Button onClick={BtnClickEvent}>帳號密碼(check sso)</Button>                               
                 <h1>{ keycloak.token}</h1>
             </Stack>
         </>

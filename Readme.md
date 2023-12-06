@@ -13,4 +13,4 @@
 
 執行
 
-    docker run --name login_protocol --network fontend_net -p 8080:8080 -d nginx
+    docker run --name login_protocol --network fontend-net -p 8080:8080 -d nginx
