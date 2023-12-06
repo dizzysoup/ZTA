@@ -14,4 +14,5 @@ sleep 30
 docker-compose up -d keycloak-db
 docker-compose up -d keycloak
 docker-compose up -d nginxproxyserver
+docker-compose up -d frontend
 docker-compose ps

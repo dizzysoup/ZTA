@@ -65,7 +65,8 @@ function LoginPage(){
                 <Text fontSize={100}> LOGIN </Text>
                 <Flex align="center"><Text fontSize={20}>帳號：</Text><Input type="text" w={300} id="account" /></Flex>
                 <Flex align="center"><Text fontSize={20}>密碼：</Text><Input type="password" w={300} id="password" /></Flex>                
-                <Button onClick={BtnClickEvent}>帳號密碼(check sso)</Button>                
+                <Button onClick={BtnClickEvent}>帳號密碼(check sso)</Button>         
+                <Text> 155 </Text>       
                 <h1>{ keycloak.token}</h1>
             </Stack>
         </>
