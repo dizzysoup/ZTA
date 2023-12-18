@@ -1,0 +1,103 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:35445 (IPv4)
+Extension host agent listening on 35445
+
+[04:41:20] 
+
+
+
+
+[04:41:20] Extension host agent started.
+[04:41:20] [127.0.0.1][c5608817][ManagementConnection] New connection established.
+[04:41:20] [127.0.0.1][ae45e7a0][ExtensionHostConnection] New connection established.
+[04:41:20] [127.0.0.1][ae45e7a0][ExtensionHostConnection] <7197> Launched Extension Host Process.
+[04:41:29] [127.0.0.1][c5608817][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[04:41:29] [127.0.0.1][ae45e7a0][ExtensionHostConnection] <7197> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[04:41:29] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[04:41:29] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[04:41:34] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[04:41:34] Cancelling previous shutdown timeout
+[04:41:34] [127.0.0.1][baaf84f1][ManagementConnection] New connection established.
+[04:41:34] [127.0.0.1][4faaaf00][ExtensionHostConnection] New connection established.
+[04:41:34] [127.0.0.1][4faaaf00][ExtensionHostConnection] <7403> Launched Extension Host Process.
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at A.U (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
+    at A.updateTitle (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
+    at T.<computed> (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
+    at Object.call (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
+    at g.s (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
+    at g.q (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
+    at a.value (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
+    at i.y (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
+    at i.fire (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
+    at process.ce (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[04:41:37] Error [CodeExpectedError]: Could not find pty on pty host
+    at A.U (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
+    at A.updateTitle (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
+    at T.<computed> (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
+    at Object.call (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
+    at g.s (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
+    at g.q (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
+    at a.value (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
+    at i.y (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
+    at i.fire (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
+    at process.ce (/home/zta/.vscode-server/bin/af28b32d7e553898b2a91af498b1fb666fdebe0c/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+New EH opened, aborting shutdown
+[04:46:34] New EH opened, aborting shutdown
+[05:06:24] No ptyHost heartbeat after 6 seconds
+[05:22:49] No ptyHost heartbeat after 6 seconds
+[05:42:19] No ptyHost heartbeat after 6 seconds
+[06:02:19] No ptyHost heartbeat after 6 seconds
+[06:19:49] No ptyHost heartbeat after 6 seconds
+[06:37:54] No ptyHost heartbeat after 6 seconds
+[07:02:43] No ptyHost heartbeat after 6 seconds
+[07:14:38] No ptyHost heartbeat after 6 seconds
+[07:18:02] No ptyHost heartbeat after 6 seconds
+[07:19:53] No ptyHost heartbeat after 6 seconds
+[07:28:51] No ptyHost heartbeat after 6 seconds
+[07:43:53] No ptyHost heartbeat after 6 seconds
+[07:45:21] No ptyHost heartbeat after 6 seconds
+[07:46:52] No ptyHost heartbeat after 6 seconds
+[07:59:49] No ptyHost heartbeat after 6 seconds
+[08:08:06] No ptyHost heartbeat after 6 seconds
+[08:09:08] No ptyHost heartbeat after 6 seconds
+[08:09:39] No ptyHost heartbeat after 6 seconds
+[08:10:10] No ptyHost heartbeat after 6 seconds
+[08:11:43] No ptyHost heartbeat after 6 seconds
+[08:20:34] No ptyHost heartbeat after 6 seconds
+[08:27:34] No ptyHost heartbeat after 6 seconds
+[08:43:31] No ptyHost heartbeat after 6 seconds
+[09:15:37] No ptyHost heartbeat after 6 seconds
+[09:16:08] No ptyHost heartbeat after 6 seconds
+[09:19:04] No ptyHost heartbeat after 6 seconds
+[09:21:37] No ptyHost heartbeat after 6 seconds
+[09:34:48] No ptyHost heartbeat after 6 seconds
+[09:38:25] No ptyHost heartbeat after 6 seconds
+[09:39:27] No ptyHost heartbeat after 6 seconds
+[09:39:58] No ptyHost heartbeat after 6 seconds
+[09:50:49] No ptyHost heartbeat after 6 seconds
+[09:57:01] No ptyHost heartbeat after 6 seconds
+[10:14:12] No ptyHost heartbeat after 6 seconds
+[10:20:34] No ptyHost heartbeat after 6 seconds
+[10:27:41] [127.0.0.1][4faaaf00][ExtensionHostConnection] <7403> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[10:27:41] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[10:32:41] Last EH closed, shutting down

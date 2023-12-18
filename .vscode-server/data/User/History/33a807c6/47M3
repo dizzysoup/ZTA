@@ -1,0 +1,22 @@
+FROM node:18.3.0-alpine
+WORKDIR /frontend
+ENV PATH /frontend/node_modules/.bin:$PATH
+
+COPY ./frontend/package*.json ./
+COPY ./frontend/ecosystem.config.js ./
+
+RUN npm install --silent && \
+    npm install react-scripts@5.0.1 -g --silent && \
+    npm install pm2 -g && \
+    npm install eslint babel-eslint --save-dev && \
+    npm i -g concurrently && \
+    npm ci \
+    && npm cache clean --force \
+    && mv /frontend/node_modules /node_modules
+
+COPY ./frontend ./
+EXPOSE 3000
+RUN ls -al -R
+
+CMD ["pm2", "reload", "all", \
+     "pm2-runtime", "npm", "run", "start", "ecosystem.config.js", "--watch"]

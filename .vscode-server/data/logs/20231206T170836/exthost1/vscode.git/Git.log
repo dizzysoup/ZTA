@@ -1,0 +1,518 @@
+2023-12-06 17:08:41.591 [info] Log level: Info
+2023-12-06 17:08:41.592 [info] Validating found git in: "git"
+2023-12-06 17:08:41.592 [info] Using git "2.34.1" from "git"
+2023-12-06 17:08:41.592 [info] > git rev-parse --show-toplevel [25ms]
+2023-12-06 17:08:41.592 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:41.617 [info] > git rev-parse --show-toplevel [50ms]
+2023-12-06 17:08:41.617 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:41.824 [info] > git rev-parse --show-toplevel [186ms]
+2023-12-06 17:08:41.824 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:41.894 [info] > git rev-parse --show-toplevel [35ms]
+2023-12-06 17:08:41.895 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:41.972 [info] > git rev-parse --show-toplevel [43ms]
+2023-12-06 17:08:41.972 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:41.990 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 17:08:41.990 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:42.007 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 17:08:42.007 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:42.039 [info] > git rev-parse --show-toplevel [18ms]
+2023-12-06 17:08:42.039 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:44.872 [info] > git rev-parse --show-toplevel [8ms]
+2023-12-06 17:08:44.872 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:45.363 [info] > git rev-parse --show-toplevel [14ms]
+2023-12-06 17:08:45.363 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:46.699 [info] > git rev-parse --show-toplevel [18ms]
+2023-12-06 17:08:46.699 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:08:54.407 [info] > git rev-parse --show-toplevel [6ms]
+2023-12-06 17:08:54.407 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:09:00.035 [info] > git rev-parse --show-toplevel [19ms]
+2023-12-06 17:09:00.035 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:09:01.811 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 17:09:01.811 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:09:19.968 [info] > git rev-parse --show-toplevel [33ms]
+2023-12-06 17:09:19.968 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:11:03.028 [info] > git rev-parse --show-toplevel [23ms]
+2023-12-06 17:11:03.028 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:11:03.868 [info] > git rev-parse --show-toplevel [3ms]
+2023-12-06 17:11:03.869 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:13:02.197 [info] > git rev-parse --show-toplevel [3ms]
+2023-12-06 17:13:02.197 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:14:01.951 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 17:14:01.951 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:15:49.558 [info] > git rev-parse --show-toplevel [25ms]
+2023-12-06 17:15:49.558 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:21:49.294 [info] > git rev-parse --show-toplevel [14ms]
+2023-12-06 17:21:49.294 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:22:11.184 [info] > git rev-parse --show-toplevel [9ms]
+2023-12-06 17:22:11.184 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:22:24.852 [info] > git rev-parse --show-toplevel [16ms]
+2023-12-06 17:22:24.852 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:22:27.384 [info] > git rev-parse --show-toplevel [14ms]
+2023-12-06 17:22:27.385 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:30:59.051 [info] > git rev-parse --show-toplevel [9ms]
+2023-12-06 17:30:59.051 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:31:03.275 [info] > git rev-parse --show-toplevel [13ms]
+2023-12-06 17:31:03.275 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:15.304 [info] > git rev-parse --show-toplevel [12ms]
+2023-12-06 17:33:15.305 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:21.995 [info] > git rev-parse --show-toplevel [12ms]
+2023-12-06 17:33:21.995 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:25.033 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 17:33:25.033 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:28.073 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 17:33:28.073 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:34.128 [info] > git rev-parse --show-toplevel [203ms]
+2023-12-06 17:33:34.128 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:37.066 [info] > git rev-parse --show-toplevel [2ms]
+2023-12-06 17:33:37.066 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:33:38.330 [info] > git rev-parse --show-toplevel [9ms]
+2023-12-06 17:33:38.330 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:35:08.960 [info] > git rev-parse --show-toplevel [10ms]
+2023-12-06 17:35:08.960 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:36:28.277 [info] > git rev-parse --show-toplevel [10ms]
+2023-12-06 17:36:28.278 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:36:46.489 [info] > git rev-parse --show-toplevel [70ms]
+2023-12-06 17:36:46.489 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:36:54.022 [info] > git rev-parse --show-toplevel [15ms]
+2023-12-06 17:36:54.022 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:37:24.481 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 17:37:24.481 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:37:39.288 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 17:37:39.288 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:37:41.974 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 17:37:41.975 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:37:54.353 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 17:37:54.353 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:37:57.040 [info] > git rev-parse --show-toplevel [12ms]
+2023-12-06 17:37:57.040 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:41:02.307 [info] > git rev-parse --show-toplevel [6ms]
+2023-12-06 17:41:02.307 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:44:05.703 [info] > git rev-parse --show-toplevel [1ms]
+2023-12-06 17:44:05.703 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:44:10.858 [info] > git rev-parse --show-toplevel [22ms]
+2023-12-06 17:44:10.858 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:48:01.866 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 17:48:01.866 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:48:21.422 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 17:48:21.422 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:48:24.208 [info] > git rev-parse --show-toplevel [13ms]
+2023-12-06 17:48:24.208 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:50:55.197 [info] > git rev-parse --show-toplevel [7ms]
+2023-12-06 17:50:55.197 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:50:57.023 [info] > git rev-parse --show-toplevel [7ms]
+2023-12-06 17:50:57.023 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:50:58.821 [info] > git rev-parse --show-toplevel [21ms]
+2023-12-06 17:50:58.821 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:51:41.695 [info] > git rev-parse --show-toplevel [8ms]
+2023-12-06 17:51:41.695 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:52:34.153 [info] > git rev-parse --show-toplevel [12ms]
+2023-12-06 17:52:34.154 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 17:52:37.214 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 17:52:37.214 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:01:45.937 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 18:01:45.937 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:01:47.854 [info] > git rev-parse --show-toplevel [8ms]
+2023-12-06 18:01:47.854 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:01:55.747 [info] > git rev-parse --show-toplevel [3ms]
+2023-12-06 18:01:55.747 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:02:17.057 [info] > git rev-parse --show-toplevel [8ms]
+2023-12-06 18:02:17.057 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:02:31.101 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:02:31.101 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:03:02.997 [info] > git rev-parse --show-toplevel [21ms]
+2023-12-06 18:03:02.997 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:03:13.431 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:03:13.431 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:03:19.050 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:03:19.050 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:03:24.747 [info] > git rev-parse --show-toplevel [0ms]
+2023-12-06 18:03:24.747 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:04:21.991 [info] > git rev-parse --show-toplevel [9ms]
+2023-12-06 18:04:21.991 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:04:27.698 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:04:27.698 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:04:30.427 [info] > git rev-parse --show-toplevel [7ms]
+2023-12-06 18:04:30.427 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:05:05.286 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 18:05:05.286 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:07:05.105 [info] > git rev-parse --show-toplevel [28ms]
+2023-12-06 18:07:05.105 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:08:29.796 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 18:08:29.796 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:10:39.705 [info] > git rev-parse --show-toplevel [10ms]
+2023-12-06 18:10:39.705 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:15:02.197 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:15:02.197 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:15:06.557 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:15:06.558 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:15:20.518 [info] > git rev-parse --show-toplevel [3ms]
+2023-12-06 18:15:20.519 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:16:08.216 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:16:08.216 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:19:28.273 [info] > git rev-parse --show-toplevel [6ms]
+2023-12-06 18:19:28.274 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:19:29.693 [info] > git rev-parse --show-toplevel [10ms]
+2023-12-06 18:19:29.693 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:19:30.959 [info] > git rev-parse --show-toplevel [45ms]
+2023-12-06 18:19:30.960 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:19:31.047 [info] > git rev-parse --show-toplevel [8ms]
+2023-12-06 18:19:31.047 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:19:37.496 [info] > git rev-parse --show-toplevel [42ms]
+2023-12-06 18:19:37.496 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:19:40.046 [info] > git rev-parse --show-toplevel [13ms]
+2023-12-06 18:19:40.046 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:22:44.753 [info] > git rev-parse --show-toplevel [17ms]
+2023-12-06 18:22:44.753 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:24:21.093 [info] > git rev-parse --show-toplevel [7ms]
+2023-12-06 18:24:21.093 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:24:21.962 [info] > git rev-parse --show-toplevel [8ms]
+2023-12-06 18:24:21.962 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:25:04.737 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 18:25:04.737 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:30:24.958 [info] > git rev-parse --show-toplevel [18ms]
+2023-12-06 18:30:24.958 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:30:26.364 [info] > git rev-parse --show-toplevel [9ms]
+2023-12-06 18:30:26.364 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:31:15.015 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:31:15.015 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:31:19.257 [info] > git rev-parse --show-toplevel [11ms]
+2023-12-06 18:31:19.258 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:53:23.435 [info] > git rev-parse --show-toplevel [13ms]
+2023-12-06 18:53:23.435 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:53:25.930 [info] > git rev-parse --show-toplevel [3ms]
+2023-12-06 18:53:25.930 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:53:32.351 [info] > git rev-parse --show-toplevel [4ms]
+2023-12-06 18:53:32.351 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:08.291 [info] > git rev-parse --show-toplevel [20ms]
+2023-12-06 18:54:08.291 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:17.678 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 18:54:17.678 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:22.991 [info] > git rev-parse --show-toplevel [14ms]
+2023-12-06 18:54:22.991 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:24.148 [info] > git rev-parse --show-toplevel [5ms]
+2023-12-06 18:54:24.148 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:24.795 [info] > git rev-parse --show-toplevel [18ms]
+2023-12-06 18:54:24.795 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:25.942 [info] > git rev-parse --show-toplevel [7ms]
+2023-12-06 18:54:25.942 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:54:26.700 [info] > git rev-parse --show-toplevel [20ms]
+2023-12-06 18:54:26.701 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:59:53.199 [info] > git rev-parse --show-toplevel [19ms]
+2023-12-06 18:59:53.199 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:59:54.601 [info] > git rev-parse --show-toplevel [14ms]
+2023-12-06 18:59:54.601 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:59:55.813 [info] > git rev-parse --show-toplevel [48ms]
+2023-12-06 18:59:55.813 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 18:59:56.644 [info] > git rev-parse --show-toplevel [16ms]
+2023-12-06 18:59:56.644 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA
+2023-12-06 19:00:00.607 [info] > git rev-parse --show-toplevel [37ms]
+2023-12-06 19:00:00.607 [info] fatal: detected dubious ownership in repository at '/home/zta/ZTA'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/zta/ZTA

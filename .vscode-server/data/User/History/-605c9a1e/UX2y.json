@@ -1,0 +1,13 @@
+{
+    "redhat.telemetry.enabled": true,
+    "hediet.vscode-drawio.resizeImages": null,
+    "remote.SSH.remotePlatform": {
+        "127.0.0.1": "linux",
+        "192.168.36.3": "linux",
+        "10.98.4.71": "linux",
+        "10.98.1.119": "linux",
+        "192.168.36.4": "linux"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+}

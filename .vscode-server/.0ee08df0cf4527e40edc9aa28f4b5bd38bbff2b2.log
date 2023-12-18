@@ -1,0 +1,38 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:40237 (IPv4)
+Extension host agent listening on 40237
+
+[16:25:54] 
+
+
+
+
+[16:25:54] Extension host agent started.
+[16:25:54] [127.0.0.1][ea6b4de7][ManagementConnection] New connection established.
+[16:25:54] [127.0.0.1][9b703e26][ExtensionHostConnection] New connection established.
+[16:25:54] [127.0.0.1][9b703e26][ExtensionHostConnection] <536945> Launched Extension Host Process.
+New EH opened, aborting shutdown
+[16:30:55] New EH opened, aborting shutdown
+[17:19:45] [127.0.0.1][ea6b4de7][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[17:19:45] [127.0.0.1][9b703e26][ExtensionHostConnection] <536945> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[17:19:45] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:19:52] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:19:52] Cancelling previous shutdown timeout
+[17:19:52] [127.0.0.1][6af44da8][ManagementConnection] New connection established.
+[17:19:52] [127.0.0.1][616e35fa][ExtensionHostConnection] New connection established.
+[17:19:52] [127.0.0.1][616e35fa][ExtensionHostConnection] <545080> Launched Extension Host Process.
+New EH opened, aborting shutdown
+[17:24:52] New EH opened, aborting shutdown
+[18:34:12] No ptyHost heartbeat after 6 seconds
+[18:35:09] No ptyHost heartbeat after 6 seconds
+[18:38:56] No ptyHost heartbeat after 6 seconds
+[18:42:04] No ptyHost heartbeat after 6 seconds

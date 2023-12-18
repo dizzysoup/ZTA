@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@passwordless-id/webauthn": "^1.3.1"
+  }
+}

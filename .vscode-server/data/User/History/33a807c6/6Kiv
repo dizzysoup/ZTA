@@ -1,0 +1,13 @@
+FROM node:18.3.0-alpine
+
+WORKDIR /login-protocol
+COPY ./login-protocol/package.json /login-protocol/package-lock.json ./
+COPY ./login-protocol/public/ public/
+COPY ./login-protocol/src/ src/
+RUN npm install
+RUN npm ci
+RUN npm run build
+COPY ./login-protocol ./
+EXPOSE 3000
+
+CMD ["npm","start"]
