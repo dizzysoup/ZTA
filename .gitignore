@@ -1,4 +1,4 @@
 node_modules
 ZTA
 .npm
-.vscode-server/data/logs/
+.vscode-server
