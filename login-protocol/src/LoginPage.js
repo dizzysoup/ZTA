@@ -5,7 +5,8 @@ import  {keycloak} from './keycloak' ;
 import AuthContext from "./AuthContext";
 import {useNavigate }from "react-router-dom";
 import { client } from '@passwordless-id/webauthn';
-import { Fido2Lib } from "fido2-lib";
+
+
 
 function LoginPage(){  
     const toast = useToast();
@@ -60,7 +61,7 @@ function LoginPage(){
     }
 
     const FIDORegister = async() => {
-        console.log(client.isLocalAuthenticator());
+        console.log(client.isAvailable());
         const challenge = "a7c61ef9-dc23-4806-b486-2428938a547e";
         const registration = await client.register("Arnaud", challenge, {
             authenticatorType: "auto",

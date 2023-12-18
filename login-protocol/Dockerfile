@@ -1,6 +1,6 @@
 # Dockerfile
 # Pull the base image
-FROM node:20.10.0-buster-slim AS builder
+FROM node:20
 # Set the working directory
 WORKDIR /react-docker
 # Copy app dependencies to container
