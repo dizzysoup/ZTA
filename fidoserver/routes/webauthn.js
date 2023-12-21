@@ -27,43 +27,42 @@ let randomBase64URLBuffer = (len) => {
 /* 註冊 */
 router.post('/register', async function(req, res, next) {
   var db = new sqlite3.Database('./user.db');
-  const result = await db.all("select true from user where username = ?",[req.body.username],(err,rows)=>{
-
-    if(err){
-      console.log(err);
-      db.close();
-      return ; 
-    }
-
-    if(rows.length > 0){
-      console.log(`${req.body.username} 已註冊`)
-      db.close();
-      return res.send(`Username ${req.body.username} already exists`);
-    }
-    let id = randomBase64URLBuffer();
-     // store  from db 
-    db.prepare("INSERT INTO user (username) values (?)").run(req.body.username);
-    console.log("註冊成功");
-    db.close();
-    res.send("註冊成功");
-  });
+  console.log(req.body.username);
+  const result = await db.all('select *from user where username = (?)',[req.body.username], (err,rows) => {
+	if(rows.length > 0 )
+		res.send("已經有資料")
+	else{
+		db.prepare("INSERT INTO user (username) values (?)").run(req.body.username);
+		res.send("註冊成功")
+	} 
+  })
 });
 
 // 登入
-router.post("/login", async (ctx) => {
-	if(!ctx.request.body || !ctx.request.body.username) {
+router.post("/login", async (req, res) => {
+	console.log(req.body);
+	var db = new sqlite3.Database('./user.db');
+	const result = await db.all('select * from user where username = (?)',[req.body.username], (err,rows) => {
+		if(rows.length > 0 )
+			res.send("success")
+		else{
+			res.send("fail")
+		} 
+	  })
+	/*
+	if(!ctx.body || !ctx.body.username) {
 		return ctx.body = {
 			"status": "failed",
 			"message": "ctx missing username field!"
 		};
 	}
 
-	let usernameClean = username.clean(ctx.request.body.username);
-
+	let usernameClean = username.clean(ctx.body.username);
+	
 	let db = database.getData("/");
-
+	console.log(db);
 	//if(!database.users[usernameClean] || !database.users[usernameClean].registered) {
-	if(!db.users[usernameClean] || !db.users[usernameClean].registered) {
+	if(!db.users ||  !db.users[usernameClean] || !db.users[usernameClean].registered) {
 		return ctx.body = {
 			"status": "failed",
 			"message": `User ${usernameClean} does not exist!`
@@ -91,8 +90,8 @@ router.post("/login", async (ctx) => {
 	assertionOptions.allowCredentials = allowCredentials;
 
 	ctx.session.allowCredentials = allowCredentials;
-
-	return ctx.body = assertionOptions;
+	*/
+	//return ctx.body = assertionOptions;
 });
 
 module.exports = router;

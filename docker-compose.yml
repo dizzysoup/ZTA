@@ -145,4 +145,19 @@ services:
        - ./login-protocol/node_modules:/node_modules
     environment:
        - CHOKIDAR_USEPOLLING=true
+
+  fidooserver:
+    container_name: FIDO-server
+    build:
+      context: .
+      dockerfile: ./fidoserver/Dockerfile
+    restart: always
+    ports:
+      - '3001:3001'
+    volumes:
+      - ./fidoserver/node_modules:/node_modules
+      - ./fidoserver/:/usr/src/app:delegated
+    environment:
+       - CHOKIDAR_USEPOLLING=true
+
   

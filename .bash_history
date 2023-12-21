@@ -66,3 +66,152 @@ ls
 docker build -t fidoserver
 docker run -p 3001:3001 -d fidoserver
 sudo su
+ls
+docker-compose up --build frontend
+sudo docker-compose up --build frontend
+cd login-protocol/
+docker compose up --build
+sudo docker compose up --build
+cd ../
+sudo docker compose up frontend
+sudo docker compose up -d  frontend
+cd login-protocol/
+npm install fido2-lib --save
+npm run eject
+webconfig
+ls
+npm run eject
+git log
+cd ../
+git status
+git lgo
+git log
+git add .
+git commit -m "1219update"
+git config --global user.email "j481936@gmail.com"
+git config --global user.name "Dizzysoup"
+git commit -m "1219update"
+git add .
+git commit -m "1219update"
+git status
+git log
+git ls
+ls
+cd ../
+ls
+git log
+cd gi
+ccd zta
+cd zta
+ls
+git add .
+sudo git add .
+sudo git commit -m "1219 backup"
+cd login-protocol/
+npm run ejecr
+npm run eject
+git add .
+git stauts
+git status
+git commid -m "ignore update"
+git commit -m "ignore update"
+cd ../
+ls
+git add .ignore
+git add .gitignore
+git commit -m "ignore update"
+sudo git add .gitignore
+sudo git commit -m "ignore update"
+sudo su
+ifconfig
+ls
+git log
+git pull
+git pull master
+git pull origin
+git pull origin master
+git log
+ls
+chmod -777 docker-compose.yml 
+ls
+git stauts
+git status
+git rm .vscode-server/data/logs/20231218T162554/exthost2/vscode.git/Git.log
+git status
+git rm .vscode-server/data/logs/20231218T162554/exthost2/output_logging_20231218T171953/1-JSON Language Server.log
+ls
+bg login-protocol
+cd login-protocol/
+git rm .vscode-server/data/logs/20231218T162554/exthost2/output_logging_20231218T171953/1-JSON Language Server.log
+git stauts
+git status
+git commit -m "fix01"
+sudo git commit -m "fix01"
+sudo
+sudo su
+nano /etc/hosts
+sudo nano /etc/hosts
+cat /etc/hosts
+nano /etc/hosts
+sudo nano /etc/hosts
+ls
+cd../
+cd ../
+ls
+sudo 
+sudo -u
+sudo su
+npm info react
+ls
+cd ../
+ls
+mkdir test
+sudo su
+ls
+cd ../
+ls
+rm -R SimpleWebAuthn/
+sudo rm -R SimpleWebAuthn/
+ls
+create-react-app login
+npm install create-react-app
+npm install -g create-react-app
+npm -v
+node -v
+ls
+cd zta/
+node -v
+cd ../
+source ~/.bashrc
+ls
+cd ../
+npx install 20.10.0
+nvm install 20.10.0
+　wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+ls
+cd home
+ls
+wget
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm
+nvm instakk 20.10.0
+nvm install 20.10.0
+node -v
+npm install -g create-react-app
+ls
+create-react-app login
+npx create-react-app login
+npm create-react-app login
+create-react-app --version
+sudo su
+ls
+cd login-protocol/
+ls
+npm start
+ip a
+npm start
+cd login-protocol/
+npm start
+npm start --port=3001
+npm start -- --port=3001
+npm start

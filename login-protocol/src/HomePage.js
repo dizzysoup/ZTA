@@ -19,7 +19,7 @@ function HomePage(){
     const {account , Setaccount} = useContext(AuthContext);
     const {password , Setpassword} = useContext(AuthContext);
 
-    const secret = process.env.REACT_APP_KEYCLOAK_TOKE;
+    const secret = '8tKmMGliHE4flUSC5x0ICUMxfbypiRGp';
     
     
     useEffect(()=> {
@@ -40,7 +40,8 @@ function HomePage(){
    
     //憑證驗證
     const introspect_Id = () => {
-        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token/introspect"
+       // const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token/introspect"
+        const url = "https://keycloak.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token/introspect"
         const formData = new URLSearchParams();
         formData.append("token",access_token);
         formData.append("client_id","reactClient");
@@ -111,7 +112,8 @@ function HomePage(){
     }
     // 登出
     const OnHandleBtnClick_out = () => {
-        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
+        //const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
+        const url = "https://keycloak.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
         const formData = new URLSearchParams();
         formData.append("refresh_token",refresh_token);
         formData.append("client_id","reactClient");
