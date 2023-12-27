@@ -1,5 +1,5 @@
 # 使用官方的 Node.js 映像，指定版本
-FROM node:14
+FROM node:20.10.0
 
 # 在容器中創建應用程式的工作目錄
 WORKDIR /usr/src/app
@@ -15,6 +15,7 @@ COPY . .
 
 # 開放應用程式運行的端口
 EXPOSE 3001
+
 
 # 定義應用程式的入口點
 CMD ["npm", "start"]

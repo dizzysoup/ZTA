@@ -6,12 +6,14 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
 
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
-import FIDORouter from './routes/webauthn';
-
+import indexRouter from './routes/index.js';
+import usersRouter from './routes/users.js';
+import FIDORouter from './routes/webauthn.js';
 
 var app = express();
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,4 +45,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export default app ; 
+//module.exports = app;

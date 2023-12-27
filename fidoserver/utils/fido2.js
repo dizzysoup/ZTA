@@ -1,5 +1,5 @@
-const
-	base64       = require("@hexagon/base64");
+import base64 from "@hexagon/base64"
+ // const base64       = require("@hexagon/base64");
 
 class Fido2 {
 	constructor() {}
@@ -57,5 +57,5 @@ class Fido2 {
 		return authnResult;
 	}
 }
-
-module.exports = Fido2;
+export default Fido2 ; 
+//module.exports = Fido2;

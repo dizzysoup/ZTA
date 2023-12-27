@@ -6,5 +6,5 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'FIDO Server' });
 });
-
-module.exports = router;
+export default router ;
+//module.exports = router;

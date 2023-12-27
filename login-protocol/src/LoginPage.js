@@ -1,11 +1,14 @@
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import { Text,Stack,Button, Flex ,Input , Box , HStack ,Toast } from '@chakra-ui/react';
 import { useToast } from "@chakra-ui/react";
 import  {keycloak} from './keycloak' ;
 import AuthContext from "./AuthContext";
 import {useNavigate }from "react-router-dom";
 import { client } from '@passwordless-id/webauthn';
-import { server } from "@passwordless-id/webauthn";
+import forge from 'node-forge'; 
+
+
+
 
 
 
@@ -13,9 +16,11 @@ function LoginPage(){
     const toast = useToast();
     const positions = ['top-right']
     const nav = useNavigate();
+    
     const {account , Setaccount} = useContext(AuthContext);
     const {password , Setpassword} = useContext(AuthContext);
-    
+
+      
     const BtnClickEvent = () => {
        
         Setaccount(document.getElementById("account").value)
@@ -64,12 +69,100 @@ function LoginPage(){
         */
     }
 
-    const FIDORegister = async() => {
-        // 檢查使用者是否存在資料庫中
-        const body = {
-            "username" : document.getElementById("username").value,
-        }
 
+
+    const FIDORegister = async() => {
+  
+            // 檢查使用者是否存在資料庫中
+            const username = document.getElementById("username").value ;             
+            const challengeurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/challenge"
+
+            const challenge = await (await fetch(challengeurl)).text();
+
+            const registration = await client.register(username , challenge , {
+                authenticatorType: "both",
+                userVerification: "required",
+                timeout: 60000,
+                attestation: false,
+                userHandle: "recommended to set it to a random 64 bytes value",
+                debug: false
+            }).catch(e => console.log(e))
+
+            const registerurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/register"
+            fetch(registerurl , 
+                {
+                    method : 'POST' ,                         
+                    headers: {
+                        'Content-Type': 'application/json'  // Specify the content type as JSON
+                      },
+                    body : JSON.stringify(registration)
+                }).then(res => res.text()).then(data => {
+                    if(data == "帳號已註冊"){
+                        toast({title:"帳號已註冊",position: positions, isClosable : true,status:'error'})
+                    }else 
+                    console.log(data)})
+        
+    
+            /*
+            fetch(url).then(response => response.text()).then(data => {
+                const challenge = data ; 
+                console.log(challenge);
+                
+                /*
+                const publicKeyCredentialCreationOptions = {
+                    challenge: Uint8Array.from(
+                        challenge, c => c.charCodeAt(0)),
+                    rp: {
+                        name: "Duo Security",
+                    },
+                    user: {
+                        id: Uint8Array.from(
+                            "UZSL85T9AFC", c => c.charCodeAt(0)),
+                        name: "lee@webauthn.guide",
+                        displayName: "Lee",
+                    },
+                    pubKeyCredParams: [{alg: -7, type: "public-key"}],
+                    authenticatorSelection: {
+                        authenticatorAttachment: "cross-platform",
+                    },
+                    timeout: 60000,
+                    attestation: "direct"
+                };
+    
+                navigator.credentials.create({
+                    publicKey: publicKeyCredentialCreationOptions
+                }).then(data => {
+                    console.log(data)
+                    const publicKeyCredentialJSON = JSON.stringify(data);
+                    console.log(publicKeyCredentialJSON);
+
+                   const url = "https://fidoserver.ztasecurity.duckdns.org/webauth/register"
+                   fetch(url, {
+                        method : 'POST' ,                         
+                        headers: {
+                            'Content-Type': 'application/json'  // Specify the content type as JSON
+                          },
+                        body : JSON.stringify(data)
+                    }).then(data => data.text()).then(res => console.log(res));
+                })
+                .catch(e => console.log(e));
+                
+
+                const registration = await client.register("Aranud" , challenge , {
+                    authenticatorType: "auto",
+                    userVerification: "required",
+                    timeout: 60000,
+                    attestation: false,
+                    userHandle: "recommended to set it to a random 64 bytes value",
+                    debug: false
+                })
+                
+            })
+            .catch(error => {console.error('Error:', error.message);});
+            */
+            
+
+        /*
         fetch('https://fidoserver.ztasecurity.duckdns.org/webauth/register',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -98,7 +191,7 @@ function LoginPage(){
                     }
         })
         .catch(err => console.log(err)); 
-
+*/
     }
 
     const FIDOLogin = async() => {
@@ -106,6 +199,25 @@ function LoginPage(){
             "username" : document.getElementById("username").value,
         }
 
+        const challenge = "a7c61ef9-dc23-4806-b486-2428938a547e";
+        client.register("Arnaud", challenge, {
+            authenticatorType: "auto",
+            userVerification: "required",
+            timeout: 60000,
+            attestation: false,
+            userHandle: "recommended to set it to a random 64 bytes value",
+            debug: false
+        }).then(
+            res => {
+                toast({title:"登入成功",position: positions, isClosable : true,status:'success'}) 
+                nav('/Home',{state:{token:res}})
+            }
+            ).catch(err => {
+                toast({title:"登入失敗",position: positions, isClosable : true,status:'error'})
+                console.log(err)})    
+            
+
+        /*
         fetch('https://fidoserver.ztasecurity.duckdns.org/webauth/login',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -113,28 +225,13 @@ function LoginPage(){
         }).then(res=>res.text())
         .then(res => {
             if(res == "success"){
-                const challenge = "a7c61ef9-dc23-4806-b486-2428938a547e";
-                client.register("Arnaud", challenge, {
-                    authenticatorType: "auto",
-                    userVerification: "required",
-                    timeout: 60000,
-                    attestation: false,
-                    userHandle: "recommended to set it to a random 64 bytes value",
-                    debug: false
-                }).then(
-                    res => {
-                        toast({title:"登入成功",position: positions, isClosable : true,status:'success'}) 
-                        nav('/Home',{state:{token:res}})
-                    }
-                    ).catch(err => {
-                        toast({title:"登入失敗",position: positions, isClosable : true,status:'error'})
-                        console.log(err)})    
-                    
+               
             }else {
                 console.log(res)
                 toast({title:"帳號不存在",position: positions, isClosable : true,status:'error'}) 
             }
         })
+        */
 
     }
     return (

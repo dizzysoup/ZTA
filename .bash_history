@@ -215,3 +215,17 @@ npm start
 npm start --port=3001
 npm start -- --port=3001
 npm start
+docker-compose up -d 
+ls
+sudo su
+cd fidoserver/
+sqlite3 user.db
+clear
+ps
+docker ps
+sudo su
+clear
+sudo su
+ls
+docker-compose up -d FIDO-server
+sudo su
