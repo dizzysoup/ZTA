@@ -1,5 +1,5 @@
 import React,{useState,useEffect,useContext} from "react";
-import { Text,Stack,Button, useToast  } from '@chakra-ui/react';
+import { Text,Stack,Button, useToast , Box   } from '@chakra-ui/react';
 import {jwtDecode} from 'jwt-decode';
 import { useLocation,useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext";
@@ -19,10 +19,11 @@ function HomePage(){
     const {account , Setaccount} = useContext(AuthContext);
     const {password , Setpassword} = useContext(AuthContext);
 
-    const secret = '8tKmMGliHE4flUSC5x0ICUMxfbypiRGp';
+    const secret = 'baNOdwa9wGfw7AVRjxkFuucwcSdMnGXj';
     
     
     useEffect(()=> {
+        // 持續驗證
         if(location.state == null ){
             toast({title:"請好好用系統",position: positions, isClosable : true,status:'error'});
             nav('/');
@@ -31,11 +32,13 @@ function HomePage(){
             }
         }
         myInterval = setInterval(()=>{
-            introspect_Id();
+            console.log(location.state.token)
+            //introspect_Id();
         },1000)
         return () => {
             clearInterval(myInterval);
         }
+        
     },[])
    
     //憑證驗證
@@ -67,8 +70,8 @@ function HomePage(){
 
     // 資源token 
     const OnHandleBtnClick = (param) => {
-        introspect_Id()
-       
+        //introspect_Id()
+       /*
         const url = `https://kong.ztasecurity.duckdns.org/${param}/realms/param/protocol/openid-connect/token`
         console.log(url);        
         const formData = new URLSearchParams();
@@ -76,7 +79,7 @@ function HomePage(){
         formData.append("client_id",param);
         formData.append("username",account);
         formData.append("password",password);
-        formData.append("client_secret",secret);
+        //formData.append("client_secret",secret);
 
         
 
@@ -95,14 +98,17 @@ function HomePage(){
         .catch(e => 
             toast({title:"獲取失敗",position: positions, isClosable : true,status:'error'})
         )
+        */
+
+        const url = `https://https://backend.ztasecurity.duckdns.org/${param}/`
         
-        
-        /*
+        const secaccess_token = 'baNOdwa9wGfw7AVRjxkFuucwcSdMnGXj';
         const requestOptions = {
             method: 'POST',
             headers : {'Content-Type':'application/json'},
             body: JSON.stringify({token:access_token})
         }
+        /*
         // backend 
         fetch('http://www.envzta.com:8002/source/',requestOptions)
             .then(res => res.text())
@@ -112,8 +118,8 @@ function HomePage(){
     }
     // 登出
     const OnHandleBtnClick_out = () => {
-        //const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
-        const url = "https://keycloak.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
+        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
+        //const url = "https://keycloak.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
         const formData = new URLSearchParams();
         formData.append("refresh_token",refresh_token);
         formData.append("client_id","reactClient");
@@ -138,17 +144,17 @@ function HomePage(){
 
     }
     return (
-        <>
+        <Box  backgroundColor={"blue.300"}  align={"center"} width = "100vw" h="100vh"  pt = "9%">
             <Stack width="100%" h="100%" align="center" spacing={4}>
                 <Text fontSize={50}> {account} </Text>
-                <Text fontSize={100}> WELCOME! </Text>                
+                <Text fontSize={100}> WELCOME！ </Text>                
                 <Stack direction={['column','row']} spacing='10px' >
                     <Button onClick={() => OnHandleBtnClick("resource1")}>獲取資源1</Button>
                     <Button  onClick={() => OnHandleBtnClick("resource2")}>獲取資源2</Button>  
                 </Stack>                
                 <Button onClick={OnHandleBtnClick_out}>登出</Button>                  
             </Stack>
-        </>
+        </Box>
     );
 }
 

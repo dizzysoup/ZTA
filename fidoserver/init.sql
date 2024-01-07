@@ -4,6 +4,7 @@ CREATE DATABASE IF NOT EXISTS fidodb;
 USE fidodb;
 
 CREATE TABLE IF NOT EXISTS credentials (
+  username VARCHAR(255),
   id VARCHAR(255) PRIMARY KEY,
   publicKey TEXT,
   algorithm VARCHAR(50)

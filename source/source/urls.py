@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from backend.views import SourceResponse
+from backend.views import Source1Response
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('source/',SourceResponse.as_view(), name="SourcePage")
+    path('resource1/',Source1Response.as_view(), name="Source1Response")
 ]

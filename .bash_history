@@ -229,3 +229,23 @@ sudo su
 ls
 docker-compose up -d FIDO-server
 sudo su
+;s
+ls
+clear
+sudo su
+ls
+cd db
+ls
+node dbtest.js
+node dbtest.js 
+sudo su
+sudo su
+ls
+docker-compose up -d
+sudo su
+ls
+cd source
+ls
+docker up
+docker build .
+sudo su

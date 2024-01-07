@@ -1,1 +1,0 @@
-2023/12/21 09:00:08 [error] 310#310: *182 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.36.1, server: frontend.ztasecurity.duckdns.org, request: "GET / HTTP/2.0", upstream: "http://140.125.178.114:3000/", host: "frontend.ztasecurity.duckdns.org", referrer: "http://192.168.36.3:81/"

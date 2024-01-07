@@ -181,15 +181,17 @@ services:
     volumes:
       - ./fidoserver/data:/var/lib/mysql  # Persistent data volume
       - ./fidoserver/init.sql:/docker-entrypoint-initdb.d/init.sql  # Initialization script
+      
+resource:
+  image: python:3.8
+  container_name : Resource
+  volumes:
+      - ./source:/app
+  restart: always
+  build: 
+    context: .
+    dockerfile: ./source/Dockerfile
+  ports: "8002:8002"
 
   
-  source:
-    container_name: source1
-    build:
-      context: .
-      dockerfile : ./source/dockerfile
-    restart: always
-    ports:
-      - '8002:8002'
-
   

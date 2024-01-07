@@ -21,8 +21,9 @@ def get_public_key():
     public_key = json.dumps(public_key).replace("'", "\"")
     return public_key
 
-class SourceResponse(APIView):
+class Source1Response(APIView):
     def post(self, request, *args, **kwargs):
+        """
         token = request.data.get('token')
         print(token)
         # get public key 
@@ -57,5 +58,6 @@ class SourceResponse(APIView):
             print("token解碼失敗")
             return render(request,'errorpage.html')       
         print(decoded_token)
+        """
         return render(request,'sourcepage.html')
     

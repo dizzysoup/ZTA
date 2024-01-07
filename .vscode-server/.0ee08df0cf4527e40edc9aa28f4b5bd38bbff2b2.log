@@ -5,140 +5,98 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to 127.0.0.1:38779 (IPv4)
-Extension host agent listening on 38779
+Server bound to 127.0.0.1:45175 (IPv4)
+Extension host agent listening on 45175
 
-[17:48:45] 
-
-
+[12:55:43] 
 
 
-[17:48:45] Extension host agent started.
-[17:48:45] [127.0.0.1][d52ca1ae][ManagementConnection] New connection established.
-[17:48:45] [127.0.0.1][5c178aef][ExtensionHostConnection] New connection established.
-[17:48:46] [127.0.0.1][5c178aef][ExtensionHostConnection] <6280> Launched Extension Host Process.
+
+
+[12:55:43] Extension host agent started.
+[12:55:43] [127.0.0.1][f05804a2][ManagementConnection] New connection established.
+[12:55:43] [127.0.0.1][4f137ad6][ExtensionHostConnection] New connection established.
+[12:55:44] [127.0.0.1][4f137ad6][ExtensionHostConnection] <33977> Launched Extension Host Process.
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
+    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
+    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
+    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
+    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
+    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
+    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
+    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
+    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
+    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[12:55:49] Error [CodeExpectedError]: Could not find pty on pty host
+    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
+    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
+    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
+    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
+    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
+    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
+    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
+    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
+    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
+    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
+    at A.updateIcon (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27562)
+    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
+    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
+    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
+    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
+    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
+    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
+    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
+    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[12:55:49] Error [CodeExpectedError]: Could not find pty on pty host
+    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
+    at A.updateIcon (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27562)
+    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
+    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
+    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
+    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
+    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
+    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
+    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
+    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
 New EH opened, aborting shutdown
-[17:53:46] New EH opened, aborting shutdown
-[17:56:08] [127.0.0.1][d52ca1ae][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[17:56:08] [127.0.0.1][5c178aef][ExtensionHostConnection] <6280> Extension Host Process exited with code: 0, signal: null.
-Last EH closed, waiting before shutting down
-[17:56:08] Last EH closed, waiting before shutting down
-Got delay-shutdown request while in shutdown timeout, delaying
-[17:56:19] Got delay-shutdown request while in shutdown timeout, delaying
-Cancelling previous shutdown timeout
-[17:56:19] Cancelling previous shutdown timeout
-[17:56:19] [127.0.0.1][76836932][ManagementConnection] New connection established.
-[17:56:19] [127.0.0.1][ced06370][ExtensionHostConnection] New connection established.
-[17:56:19] [127.0.0.1][ced06370][ExtensionHostConnection] <9119> Launched Extension Host Process.
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
-    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
-    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
-    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
-    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
-    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
-    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
-    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
-    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
-    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:937:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-[17:56:22] Error [CodeExpectedError]: Could not find pty on pty host
-    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
-    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
-    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
-    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
-    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
-    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
-    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
-    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
-    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
-    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:937:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-[17:57:42] No ptyHost heartbeat after 6 seconds
-Got delay-shutdown request while in shutdown timeout, delaying
-[18:00:36] Got delay-shutdown request while in shutdown timeout, delaying
-Cancelling previous shutdown timeout
-[18:00:36] Cancelling previous shutdown timeout
-[18:00:36] [127.0.0.1][ba01ce35][ManagementConnection] New connection established.
-[18:00:36] [127.0.0.1][2eaf1bc9][ExtensionHostConnection] New connection established.
-[18:00:36] [127.0.0.1][2eaf1bc9][ExtensionHostConnection] <10454> Launched Extension Host Process.
-[18:01:29] [127.0.0.1][ba01ce35][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[18:01:29] [127.0.0.1][2eaf1bc9][ExtensionHostConnection] <10454> Extension Host Process exited with code: 0, signal: null.
-Cancelling previous shutdown timeout
-[18:01:29] Cancelling previous shutdown timeout
-[18:01:34] [127.0.0.1][88cb1b05][ManagementConnection] New connection established.
-[18:01:34] [127.0.0.1][641c8387][ExtensionHostConnection] New connection established.
-[18:01:34] [127.0.0.1][641c8387][ExtensionHostConnection] <10794> Launched Extension Host Process.
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
-    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
-    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
-    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
-    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
-    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
-    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
-    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
-    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
-    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:937:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-[18:01:37] Error [CodeExpectedError]: Could not find pty on pty host
-    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
-    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
-    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
-    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
-    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
-    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
-    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
-    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
-    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
-    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:937:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-[18:04:46] No ptyHost heartbeat after 6 seconds
-[18:16:06] No ptyHost heartbeat after 6 seconds
-[18:24:32] No ptyHost heartbeat after 6 seconds
-[18:31:32] [127.0.0.1][ae295ccf][ManagementConnection] Unknown reconnection token (never seen).
-[18:31:39] [127.0.0.1][ca565090][ManagementConnection] New connection established.
-[18:31:39] [127.0.0.1][f6779b77][ExtensionHostConnection] New connection established.
-[18:31:39] [127.0.0.1][f6779b77][ExtensionHostConnection] <19216> Launched Extension Host Process.
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
-    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
-    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
-    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
-    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
-    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
-    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
-    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
-    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
-    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:937:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-[18:31:41] Error [CodeExpectedError]: Could not find pty on pty host
-    at A.U (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:32377)
-    at A.updateTitle (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:27509)
-    at T.<computed> (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:43:22735)
-    at Object.call (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:34:5041)
-    at g.s (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:5153)
-    at g.q (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4662)
-    at a.value (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:32:4064)
-    at i.y (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:1906)
-    at i.fire (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:27:2123)
-    at process.ce (/home/zta/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/out/vs/platform/terminal/node/ptyHostMain.js:25:10117)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:937:14)
-    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
-[18:45:38] No ptyHost heartbeat after 6 seconds
-[19:20:44] No ptyHost heartbeat after 6 seconds
-[19:22:51] No ptyHost heartbeat after 6 seconds
+[13:00:43] New EH opened, aborting shutdown
+[13:51:22] No ptyHost heartbeat after 6 seconds
+[14:13:43] No ptyHost heartbeat after 6 seconds
+[14:34:10] No ptyHost heartbeat after 6 seconds
+[14:51:33] No ptyHost heartbeat after 6 seconds
+[15:00:55] No ptyHost heartbeat after 6 seconds
+[15:05:49] [127.0.0.1][863a9566][ManagementConnection] New connection established.
+[15:05:49] [127.0.0.1][02eac6ca][ExtensionHostConnection] New connection established.
+[15:05:49] [127.0.0.1][02eac6ca][ExtensionHostConnection] <53687> Launched Extension Host Process.
+[15:43:19] No ptyHost heartbeat after 6 seconds
+[16:04:11] No ptyHost heartbeat after 6 seconds
+[16:08:22] No ptyHost heartbeat after 6 seconds
+[16:12:21] No ptyHost heartbeat after 6 seconds
+[16:24:32] No ptyHost heartbeat after 6 seconds
+[16:37:00] No ptyHost heartbeat after 6 seconds
+[16:37:42] No ptyHost heartbeat after 6 seconds
+[17:05:11] No ptyHost heartbeat after 6 seconds
+[18:29:52] No ptyHost heartbeat after 6 seconds
+[18:45:46] No ptyHost heartbeat after 6 seconds
+[19:03:46] No ptyHost heartbeat after 6 seconds
+[19:27:38] No ptyHost heartbeat after 6 seconds
+[19:32:17] [127.0.0.1][2e90b9c1][ManagementConnection] New connection established.
+[19:32:17] [127.0.0.1][65c61b3c][ExtensionHostConnection] New connection established.
+[19:32:17] [127.0.0.1][65c61b3c][ExtensionHostConnection] <99566> Launched Extension Host Process.
