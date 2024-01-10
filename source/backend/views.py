@@ -5,6 +5,9 @@ from rest_framework import status
 from rest_framework import permissions
 from rest_framework.response import Response
 from keycloak.openid_connection import KeycloakOpenID
+from rest_framework import viewsets
+from backend.models import Mechine
+from backend.serializers import MechineuSerializer
 import jwt 
 import requests
 import time
@@ -22,7 +25,7 @@ def get_public_key():
     return public_key
 
 class Source1Response(APIView):
-    def post(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         """
         token = request.data.get('token')
         print(token)
@@ -61,3 +64,14 @@ class Source1Response(APIView):
         """
         return render(request,'sourcepage.html')
     
+class MechineViewSet(APIView):
+    def get(self, request, *args, **kwargs):
+        queryset = Mechine.objects.all()
+        serializer_class = MechineuSerializer(queryset, many=True)
+        return Response({"Mechine": serializer_class.data}, status=status.HTTP_201_CREATED)
+    def post(self, request, *args, **kwargs):
+        serializer = MechineuSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"Mechine": serializer.data}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
