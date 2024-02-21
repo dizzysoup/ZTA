@@ -1,5 +1,16 @@
 import React,{useState,useEffect,useContext} from "react";
-import { Text,Stack,Button, useToast , Box   } from '@chakra-ui/react';
+import { Text,Stack,Button, useToast , Box  } from '@chakra-ui/react';
+import {
+    Table,
+    Thead,
+    Tbody,
+    Tfoot,
+    Tr,
+    Th,
+    Td,
+    TableCaption,
+    TableContainer,
+  } from '@chakra-ui/react'
 import {jwtDecode} from 'jwt-decode';
 import { useLocation,useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext";
@@ -11,6 +22,7 @@ function HomePage(){
     const location = useLocation();
     const positions = ['top-right']
     const [id_token ,setIdtoken]  = useState("");
+    const [data , setData ] = useState(null);
     const nav = useNavigate();
     let myInterval = [];
 
@@ -32,7 +44,7 @@ function HomePage(){
             }
         }
         myInterval = setInterval(()=>{
-            console.log(location.state.token)
+           
             //introspect_Id();
         },1000)
         return () => {
@@ -100,7 +112,7 @@ function HomePage(){
         )
         */
 
-        const url = `https://https://backend.ztasecurity.duckdns.org/${param}/`
+        const url = `https://backend.ztasecurity.duckdns.org/${param}/`
         
         const secaccess_token = 'baNOdwa9wGfw7AVRjxkFuucwcSdMnGXj';
         const requestOptions = {
@@ -108,13 +120,18 @@ function HomePage(){
             headers : {'Content-Type':'application/json'},
             body: JSON.stringify({token:access_token})
         }
-        /*
+        
         // backend 
-        fetch('http://www.envzta.com:8002/source/',requestOptions)
+        fetch(url)
             .then(res => res.text())
-            .then(res => document.body.innerHTML = res)
+            .then(res => {
+                if(param == "resource2"){
+                    setData(res)
+                }else 
+                document.body.innerHTML = res
+            })
             .catch(e => console.error(e))    
-        */
+        
     }
     // 登出
     const OnHandleBtnClick_out = () => {
@@ -152,9 +169,38 @@ function HomePage(){
                     <Button onClick={() => OnHandleBtnClick("resource1")}>獲取資源1</Button>
                     <Button  onClick={() => OnHandleBtnClick("resource2")}>獲取資源2</Button>  
                 </Stack>                
-                <Button onClick={OnHandleBtnClick_out}>登出</Button>                  
+                <Button onClick={OnHandleBtnClick_out}>登出</Button>  
+                { data == null ? "" : 
+                   <ResourceBlock content={data}/>
+                }
             </Stack>
         </Box>
+    );
+}
+
+function ResourceBlock(props){
+    const content = JSON.parse(props.content).Mechine[0] ; 
+    console.log(content);
+    return (
+        <TableContainer>
+    <Table variant='simple'>
+        <TableCaption> Resource List </TableCaption>
+        <Thead>
+        <Tr>
+            <Th>Name </Th>
+            <Th> Mechine </Th>
+            <Th>created </Th>
+        </Tr>
+        </Thead>
+        <Tbody>
+        <Tr>
+            <Td>{content.name}</Td>
+            <Td>{content.member}</Td>
+            <Td>{content.last_modify_date}</Td>
+        </Tr>
+        </Tbody>
+        </Table>
+    </TableContainer>
     );
 }
 

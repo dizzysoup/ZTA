@@ -249,3 +249,27 @@ ls
 docker up
 docker build .
 sudo su
+clear
+ls
+sudo su
+ls
+docker-compose up --build
+docker-compose up -d
+docker-compose up 
+sudo su
+docker ps
+sudo su
+ifconfig
+ls
+cd fidoserver/
+ls
+node db.js
+cd db
+ls
+node dbtest.js
+docker ps
+sudo su
+clear
+ls
+docker ps
+sudo su

@@ -79,7 +79,7 @@ function LoginPage(){
     const FIDORegister = async() => {
             // 檢查使用者是否存在資料庫中
             const username = document.getElementById("username").value ;             
-            const challengeurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/challenge"
+            const challengeurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/challenge"
 
             const challenge = await (await fetch(challengeurl)).text();
 
@@ -93,7 +93,7 @@ function LoginPage(){
             }).catch(e => console.log(e))
            
             if(registration !== undefined){
-                const registerurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/register"
+                const registerurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/register"
                 fetch(registerurl , 
                     {
                         method : 'POST' ,                         
@@ -126,7 +126,7 @@ function LoginPage(){
             "username" : username
         }
         // 取得Id 
-        const IDurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/Id" ;
+        const IDurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/Id" ;
         const options = {
             method : 'POST' ,                         
                 headers: {
@@ -143,7 +143,9 @@ function LoginPage(){
         }
          
         // 取得challenge  / 每次都會生成
-        const challengeurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/challenge"
+        //const challengeurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/challenge"
+        const challengeurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/challenge"
+
         const challenge = await (await fetch(challengeurl)).text();
         
         // 產生驗證憑證
@@ -155,7 +157,8 @@ function LoginPage(){
         console.log(authentication)
 
         if(authentication !== undefined){
-            const loginurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/login"
+            //const loginurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/login"
+            const loginurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/login"
             fetch(loginurl , {
             method : 'POST' ,                         
                 headers: {

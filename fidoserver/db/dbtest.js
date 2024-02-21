@@ -7,7 +7,7 @@ async function CreateConnection() {
         const con = await db ; 
         await con.query('drop table user ')
         await con.query('create table user(username varchar(20), id  VARCHAR(255)) ');
-       // console.log(rows);
+        console.log('connext success!');
         // 關閉連接
         con.end()
 
