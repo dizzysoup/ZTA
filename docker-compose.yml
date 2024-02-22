@@ -156,14 +156,14 @@ services:
       - '3001:3001'
     depends_on:
       - fido-db
-    volumes:
+    command : npm start
+    volumes:      
+      - ./fidoserver:/fidoserver
       - ./fidoserver/node_modules:/node_modules
-      - ./fidoserver/:/usr/src/app:delegated
     environment:      
-      DB_HOST: fido-db
       DB_PORT: 3306
       DB_USER: user
-      DB_PASSWORD: password
+      DB_PASSWORD: root
       DB_DATABASE: fidodb
       CHOKIDAR_USEPOLLING: 'true'
 
@@ -177,7 +177,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: fidodb
       MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: root
     volumes:
       - ./fidoserver/data:/var/lib/mysql  # Persistent data volume
       - ./fidoserver/init.sql:/docker-entrypoint-initdb.d/init.sql  # Initialization script
