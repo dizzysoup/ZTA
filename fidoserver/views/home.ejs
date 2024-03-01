@@ -4,18 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
-<body>
-    <h1>憑證管理</h1>
+<body  class="container" class="btn btn-danger mt-3">
+    <h1 class="mt-5" >憑證管理</h1>
+    <div class="mt-4">
+        <label for="deleteCredentials">選擇要刪除的憑證：</label>
+        <select id="deleteCredentials" name="deleteCredentials">
+            <% credential.forEach((row) => { %>
+                <option value="<%= row.id %>"><%= row.id %></option>
+            <% }); %>
+        </select>
+        <button onclick="deleteCredentials()">刪除</button>
+    </div>
+    <button id="truncateButton" >Truncate Credentials Table</button>
     <!-- 列出目前憑證 -->
-    <table class="table">
+    <table class="table mt-4" >
         <thread>
             <tr>
-                <th scope="col"Username</th>
+                <th scope="col">ID</th>
                 <th scope="col">PublicKey</th>
             </tr>
         </thread>
-        
+        <tbody>
+            <% credential.forEach((row) => { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.publicKey %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <h1 class="mt-5" >使用者管理</h1>
+
+    <!-- 刪除使用者的選擇框 -->
+    <div class="mt-4">
+        <label for="deleteUsername">選擇要刪除的使用者：</label>
+        <select id="deleteUsername" name="deleteUsername">
+            <% user.forEach((row) => { %>
+                <option value="<%= row.username %>"><%= row.username %></option>
+            <% }); %>
+        </select>
+        <button onclick="deleteUser()">刪除</button>
+    </div>
+
+    <!-- 列出目前使用者 -->
+    <table class="table mt-4" >
+        <thread>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">ID</th>
+            </tr>
+        </thread>
+        <tbody>
+            <% user.forEach((row) => { %>
+                <tr>
+                    <td><%= row.username %></td>
+                    <td><%= row.id %></td>
+                </tr>
+            <% }); %>
+        </tbody>
     </table>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+    document.getElementById("truncateButton").addEventListener("click", function() {
+        console.log("click!");
+        // Make an AJAX request to trigger table truncation
+        fetch('truncate-credentials', {
+            method: 'POST',
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Credentials table truncated successfully');
+                document.location.reload();
+                // You can add additional logic or feedback here if needed
+            } else {
+                console.error('Failed to truncate credentials table');
+                // Handle error or provide feedback to the user
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle network or other errors
+        });
+    });
+
+    function deleteUser() {
+        var usernameToDelete = document.getElementById("deleteUsername").value;
+
+        fetch('deleteUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: usernameToDelete }),
+        })
+        .then(data => {
+            document.location.reload();
+            // Refresh the page or update the user list as needed
+        }).catch(error => {
+            console.error('Error:', error);
+            });
+    }
+
+    function deleteCredentials() {
+        var id = document.getElementById("deleteCredentials").value;
+
+        fetch('deleteCredentials', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id: id }),
+        })
+        .then(data => {
+            document.location.reload();
+            // Refresh the page or update the user list as needed
+        }).catch(error => {
+            console.error('Error:', error);
+            });
+    }
+    
+</script>
 </html>

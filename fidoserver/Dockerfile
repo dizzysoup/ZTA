@@ -14,5 +14,6 @@ RUN npm install
 # 開放應用程式運行的端口
 EXPOSE 3001
 
+
 # 定義應用程式的入口點
 CMD ["npm", "start"]

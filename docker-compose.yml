@@ -183,17 +183,34 @@ services:
       - ./fidoserver/init.sql:/docker-entrypoint-initdb.d/init.sql  # Initialization script
       
   resource:
-    image: python:3.8
+    image: python:3.10
     container_name: Resource
     volumes:
-      - ./source:/web
+      - ./resource:/web
     restart: always
     build:
       context: .
-      dockerfile: ./source/Dockerfile
+      dockerfile: ./resource/Dockerfile
     ports:
       - "8002:8002"
-    command: ["python", "manage.py", "runserver", "0.0.0.0:8002", "--noreload"]
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8002"]
+    depends_on:
+      - resource_db
+
+  resource_db : 
+    image: mariadb
+    container_name: Resource_db
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: resourcedb
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "root"
+    volumes:
+      - ./source/data:/var/lib/mysql  # Persistent data volume
+      - ./source/init.sql:/docker-entrypoint-initdb.d/init.sql  # Initialization script
 
   
   

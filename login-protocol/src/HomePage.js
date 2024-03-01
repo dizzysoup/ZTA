@@ -16,7 +16,6 @@ import { useLocation,useNavigate } from "react-router-dom";
 import AuthContext from "./AuthContext";
 
 
-
 function HomePage(){
     const toast = useToast();
     const location = useLocation();
@@ -26,12 +25,12 @@ function HomePage(){
     const nav = useNavigate();
     let myInterval = [];
 
-    const access_token =  location.state == null ? null :  location.state.token.access_token;
-    const refresh_token = location.state == null ? null : location.state.token.refresh_token;
+
+    const ID_token = location.state == null ? null : location.state.token["id_token"];
+    const refresh_token = location.state == null ? null : location.state.token["refresh_token"];
+
     const {account , Setaccount} = useContext(AuthContext);
     const {password , Setpassword} = useContext(AuthContext);
-
-    const secret = 'baNOdwa9wGfw7AVRjxkFuucwcSdMnGXj';
     
     
     useEffect(()=> {
@@ -44,8 +43,7 @@ function HomePage(){
             }
         }
         myInterval = setInterval(()=>{
-           
-            //introspect_Id();
+            introspect_Id();
         },1000)
         return () => {
             clearInterval(myInterval);
@@ -53,31 +51,17 @@ function HomePage(){
         
     },[])
    
-    //憑證驗證
+    //id token 驗證
     const introspect_Id = () => {
-       // const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token/introspect"
-        const url = "https://keycloak.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/token/introspect"
-        const formData = new URLSearchParams();
-        formData.append("token",access_token);
-        formData.append("client_id","reactClient");
-        formData.append("client_secret",secret);
-        fetch(url,{
-            method:"POST",
-            headers : { 'Content-Type' : 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
-            body : formData.toString()
-        }).then(res => res.json())
-        .then(res => {
-            setIdtoken(res);
-            if(res["active"] === false){
-               toast({title:"憑證失效",position: positions, isClosable : true,status:'error'});
-               nav("/");
-            }
-        })
-        .catch(e =>{
-            console.log(e)
-           toast({title:"憑證失效",position: positions, isClosable : true,status:'error'});
-            nav("/");
-        }) 
+        // 檢查exp 效期
+        const decodeData = jwtDecode(ID_token);
+        const currentTimeStamp = Math.floor(Date.now() / 1000);        
+        
+        if(!decodeData["exp"] > currentTimeStamp){
+            toast({title:"效期失效",position: positions, isClosable : true,status:'error'});
+            OnHandleBtnClick_out(); // 自動登出
+        }else 
+            console.log("ID Token 效期內");
     }
 
     // 資源token 
@@ -133,19 +117,23 @@ function HomePage(){
             .catch(e => console.error(e))    
         
     }
+
+    // Leetcode Bar // 訪問資源
+    const LeetcodeBarClick = () => {
+        introspect_Id();
+        // 取得access token 
+        
+        nav('/LeetcodeBar');
+    }
     // 登出
     const OnHandleBtnClick_out = () => {
-        const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
-        //const url = "https://keycloak.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
-        const formData = new URLSearchParams();
-        formData.append("refresh_token",refresh_token);
-        formData.append("client_id","reactClient");
-        formData.append("client_secret",secret);
-        console.log( formData.toString());
+        //const url = "https://kong.ztasecurity.duckdns.org/realms/react-keycloak/protocol/openid-connect/logout"
+        const url = "https://kong.ztaenv.duckdns.org/fido/webauth/logout"
+
         fetch(url,{
             method:"POST",
-            headers : { 'Content-Type' : 'application/x-www-form-urlencoded'},
-            body : formData.toString()
+            headers : { 'Content-Type' : 'application/json'},
+            body : JSON.stringify({"refresh_token" : refresh_token})
         })
         .then(res => {
             console.log(res)
@@ -156,9 +144,7 @@ function HomePage(){
         .catch(e =>{
             console.log(e)
             toast({title:"登出失敗",position: positions, isClosable : true,status:'error'});
-           
         }) 
-
     }
     return (
         <Box  backgroundColor={"blue.300"}  align={"center"} width = "100vw" h="100vh"  pt = "9%">
@@ -166,7 +152,7 @@ function HomePage(){
                 <Text fontSize={50}> {account} </Text>
                 <Text fontSize={100}> WELCOME！ </Text>                
                 <Stack direction={['column','row']} spacing='10px' >
-                    <Button onClick={() => OnHandleBtnClick("resource1")}>獲取資源1</Button>
+                    <Button onClick={() => LeetcodeBarClick() }>Leetcode Bar </Button>
                     <Button  onClick={() => OnHandleBtnClick("resource2")}>獲取資源2</Button>  
                 </Stack>                
                 <Button onClick={OnHandleBtnClick_out}>登出</Button>  

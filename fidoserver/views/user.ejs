@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+<body  class="container" class="btn btn-danger mt-3">
+    <h1 class="mt-5" >使用者管理</h1>
+    <button id="truncateButton" >Truncate User Table</button>
+
+    <!-- 列出目前使用者 -->
+    <table class="table mt-4" >
+        <thread>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">ID</th>
+            </tr>s
+        </thread>
+        <tbody>
+            <% credential.forEach((row) => { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.publicKey %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+    document.getElementById("truncateButton").addEventListener("click", function() {
+        console.log("click!");
+        // Make an AJAX request to trigger table truncation
+        fetch('truncate-credentials', {
+            method: 'POST',
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Credentials table truncated successfully');
+                document.location.reload();
+                // You can add additional logic or feedback here if needed
+            } else {
+                console.error('Failed to truncate credentials table');
+                // Handle error or provide feedback to the user
+            }
+        })
+
+        
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle network or other errors
+        });
+    });
+</script>
+</html>

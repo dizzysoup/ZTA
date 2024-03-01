@@ -7,6 +7,7 @@ var db = new sqlite3.Database(file);
 
 db.serialize(function() {
         db.run("CREATE TABLE IF NOT EXISTS user (username , id)");
+        
 });
 
 db.close();

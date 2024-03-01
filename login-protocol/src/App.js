@@ -6,7 +6,7 @@ import AuthContext from './AuthContext';
 import LoginPage from './LoginPage';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import HomePage from './HomePage';
-
+import LeetcodeBar from './LeetcodeBar';
 
 
 
@@ -23,6 +23,7 @@ function App() {
         <Routes>         
           <Route path="/" element={<LoginPage />} />
           <Route path="/Home" element={<HomePage />} />
+          <Route path="/LeetcodeBar" element={<LeetcodeBar />} />
         </Routes>
         
         

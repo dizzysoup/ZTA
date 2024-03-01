@@ -79,10 +79,10 @@ function LoginPage(){
     const FIDORegister = async() => {
             // 檢查使用者是否存在資料庫中
             const username = document.getElementById("username").value ;             
-            const challengeurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/challenge"
+            const challengeurl = "https://kong.ztaenv.duckdns.org/fido/webauth/challenge"
 
             const challenge = await (await fetch(challengeurl)).text();
-
+            console.log(challenge)
             const registration = await client.register(username , challenge , {
                 authenticatorType: "both",
                 userVerification: "required",
@@ -92,32 +92,33 @@ function LoginPage(){
                 debug: false
             }).catch(e => console.log(e))
            
-            if(registration !== undefined){
-                const registerurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/register"
-                fetch(registerurl , 
-                    {
-                        method : 'POST' ,                         
-                        headers: {
-                            'Content-Type': 'application/json'  // Specify the content type as JSON
-                          },
-                        body : JSON.stringify(registration)
-                    }).then(res => res.text()).then(data => {
-                        if(data == "帳號已註冊"){
-                            toast({title:"帳號已註冊",position: positions, isClosable : true,status:'error'})
-                        }else {
-                            const Ids = JSON.parse(data)["credential"]["id"];
-                            console.log(Ids);
-                            /*
-                            const storedData = localStorage.getItem('certificate');
-                            const newArray = Array.isArray(storedData) ? JSON.parse(storedData) : [];
-                            newArray.push(data);
-                            console.log(newArray);*/
-                            localStorage.setItem('certificate', JSON.stringify(Ids));
-                            toast({title:"註冊成功",position: positions, isClosable : true,status:'success'})
-                        }
-                            
-                    }).catch(e => console.log(e))
-            } 
+           console.log(registration)
+           if(registration !== undefined){
+            const registerurl = "https://kong.ztaenv.duckdns.org/fido/webauth/register"
+            fetch(registerurl , 
+                {
+                    method : 'POST' ,                         
+                    headers: {
+                        'Content-Type': 'application/json'  // Specify the content type as JSON
+                      },
+                    body : JSON.stringify(registration)
+                }).then(res => res.text()).then(data => {
+                    if(data == "帳號已註冊"){
+                        toast({title:"帳號已註冊",position: positions, isClosable : true,status:'error'})
+                    }else {
+                        const Ids = JSON.parse(data)["credential"]["id"];
+                        console.log(Ids);
+                        /*
+                        const storedData = localStorage.getItem('certificate');
+                        const newArray = Array.isArray(storedData) ? JSON.parse(storedData) : [];
+                        newArray.push(data);
+                        console.log(newArray);*/
+                        localStorage.setItem('certificate', JSON.stringify(Ids));
+                        toast({title:"註冊成功",position: positions, isClosable : true,status:'success'})
+                    }
+                        
+                }).catch(e => console.log(e))
+        } 
     }
     // 登入
     const FIDOLogin = async() => {
@@ -126,7 +127,7 @@ function LoginPage(){
             "username" : username
         }
         // 取得Id 
-        const IDurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/Id" ;
+        const IDurl = "https://kong.ztaenv.duckdns.org/fido/webauth/Id" ;
         const options = {
             method : 'POST' ,                         
                 headers: {
@@ -136,40 +137,41 @@ function LoginPage(){
         }
         let Id = [] ;
         try {
-            Id = (await (await fetch(IDurl,options)).json())[0]["id"];
+            Id = (await (await fetch(IDurl,options)).json())[0]["id"];            
         } catch(e) {
             toast({title:"帳號不存在",position: positions, isClosable : true,status:'error'});
             return ; 
         }
          
         // 取得challenge  / 每次都會生成
-        //const challengeurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/challenge"
-        const challengeurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/challenge"
+        const challengeurl = "https://kong.ztaenv.duckdns.org/fido/webauth/challenge"
 
         const challenge = await (await fetch(challengeurl)).text();
         
         // 產生驗證憑證
         const authentication  = await client.authenticate([Id],challenge,{
-            "authenticatorType" : "auto",
+            "authenticatorType" : "roaming", 
             "userVerification" : "required",
             "timeout" : 60000
         }).catch(e => console.log(e))
         console.log(authentication)
 
+        
         if(authentication !== undefined){
             //const loginurl = "https://fidoserver.ztasecurity.duckdns.org/webauth/login"
-            const loginurl = "https://kong.ztasecurity.duckdns.org/fido/webauth/login"
+            const loginurl = "https://kong.ztaenv.duckdns.org/fido/webauth/login"
             fetch(loginurl , {
             method : 'POST' ,                         
                 headers: {
                     'Content-Type': 'application/json'  // Specify the content type as JSON
                 },
                 body : JSON.stringify(authentication)
-            }).then(res => res.json()).then(data =>{            
-            toast({title:"登入成功",position: positions, isClosable : true,status:'success'});           
-            nav('/Home',{state:{token:data["jsonWebToken"]}})                                  
+            }).then(res => res.json()).then(data =>{                        
+                toast({title:"登入成功",position: positions, isClosable : true,status:'success'});           
+                nav('/Home',{state:{token:data}})                                  
         }).catch(e => toast({title:"登入失敗",position: positions, isClosable : true,status:'error'}))
         }
+        
     }
     return (
         <Box  backgroundColor={"blue.300"}  align={"center"} width = "100vw" h="100vh"  pt = "9%">
