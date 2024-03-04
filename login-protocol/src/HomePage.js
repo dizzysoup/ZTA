@@ -120,10 +120,33 @@ function HomePage(){
 
     // Leetcode Bar // 訪問資源
     const LeetcodeBarClick = () => {
-        introspect_Id();
-        // 取得access token 
+        introspect_Id(); 
         
-        nav('/LeetcodeBar');
+        const url = "https://kong.ztaenv.duckdns.org/fido/webauth/introspect"
+        // ID token introspect
+        fetch(url,{
+            method:"POST",
+            headers : { 'Content-Type' : 'application/json'},
+            body : JSON.stringify({"token":ID_token})
+        }).then(res => res.json())
+        .then(res => {
+            console.log(res);
+            if(res == true){
+               
+                // 取得access token , sign 
+                const sign_url = "https://kong.ztaenv.duckdns.org/keycloakserver/keycloak/sign"
+                fetch(sign_url)
+                .then(res => res.json())
+                .then(data => {   
+                    console.log(data)                                
+                    nav('/LeetcodeBar',{state:{token:data}})
+                })
+                .catch(e => console.error(e))
+               
+            }
+        })
+        .catch(e => console.error(e))
+        
     }
     // 登出
     const OnHandleBtnClick_out = () => {

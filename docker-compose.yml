@@ -115,6 +115,25 @@ services:
       KEYCLOAK_ADMIN:     admin
       KEYCLOAK_ADMIN_PASSWORD: admin
   
+  keycloak-server :
+    container_name: keycloak-server
+    build:
+      context: .
+      dockerfile: ./keycloakserver/Dockerfile
+    restart: always
+    ports:
+      - '3002:3002'
+    networks:
+      - keycloak-net
+    depends_on:
+      - keycloak
+    command: npm start
+    volumes:
+      - ./keycloakserver:/keycloakserver
+      - ./keycloakserver/node_modules:/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: 'true'
+
   nginxproxyserver:
     container_name: nginxproxyserver
     image: 'jc21/nginx-proxy-manager:latest'

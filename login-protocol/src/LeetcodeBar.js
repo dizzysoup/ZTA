@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Progress, Button, Box, Heading, Text , Stack ,Flex, useAccordionItemState } from "@chakra-ui/react";
+import { Progress, Button, Box, Heading, Text , Stack ,Flex, useToast } from "@chakra-ui/react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function PointsBlock(keys){
   const point = keys.item.points;
@@ -34,14 +35,43 @@ function PointsBlock(keys){
 
 function LeetcodeBar() {
   const [UserData , setUserData] = useState([]); // Set initial user data to an empty array [
-
+  const toast = useToast();
+  const nav = useNavigate();
+  const location = useLocation();
+  const access_token = location.state == null ? null : location.state.token["access_token"];
+  const sign = location.state == null ? null : location.state.token["sign"];
+  console.log(access_token);
   useEffect(() => {
-    const sourceurl = "https://source.ztaenv.duckdns.org/leetcodebar/score/"
-    fetch(sourceurl)
-      .then((res) => res.json())
-      .then((data) => {
-        setUserData(data["Scores"]);
-      });
+    
+
+    if(location.state == null){
+      toast({title:"請好好用系統",position:  ['top-right'], isClosable : true,status:'error'});
+      nav('/');
+      return ; 
+    }
+
+    // verify token (驗簽)
+    const verifytoken = "https://source.ztaenv.duckdns.org/leetcodebar/verify/"
+    fetch(verifytoken , {
+      method : "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body : JSON.stringify({access_token : access_token, sign : sign})
+    }).then((res) => res.json()).then((data) => {
+      if(data["Error"] != null)    {
+        toast({title:data["Error"],position:  ['top-right'], isClosable : true,status:'error'});
+        nav('/');
+      }else 
+        toast({title:"驗簽成功",position:  ['top-right'], isClosable : true,status:'success'});
+        const sourceurl = "https://source.ztaenv.duckdns.org/leetcodebar/score/"
+        fetch(sourceurl).then((res) => res.json())
+            .then((data) => {
+              setUserData(data["Scores"]);
+            });
+    }).catch((error) => { console.error(error);});
+
+    
   }, []);
   console.log(UserData)
   return (

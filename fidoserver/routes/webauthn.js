@@ -220,5 +220,28 @@ router.post("/logout", async (req, res) => {
 	
 });
 
+// Introspect
+router.post("/introspect", async (req, res) => {
+	const token = req.body.token;
+	const myHeaders = new Headers();
+	myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+	const urlencoded = new URLSearchParams();
+	urlencoded.append("token", token);
+	urlencoded.append("client_id", "FIDOServer");
+	urlencoded.append("client_secret", process.env.CLIENT_SECRET);
+
+	const requestOptions = {
+		method: "POST",
+		headers: myHeaders,
+		body: urlencoded,
+		redirect: "follow"
+	};
+
+	fetch("https://kong.ztaenv.duckdns.org/keycloak/realms/react-keycloak/protocol/openid-connect/token/introspect", requestOptions)
+  		.then((response) => response.json())
+  		.then((result) => res.send(result["active"]))
+  		.catch((error) => console.error(error));
+});
+
 export default router ;
 
