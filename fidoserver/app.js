@@ -9,6 +9,7 @@ import cors from 'cors';
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 import FIDORouter from './routes/webauthn.js';
+import LDAPRouter from './routes/ldap.js';
 
 var app = express();
 const __filename = new URL(import.meta.url).pathname;
@@ -28,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/webauth', FIDORouter);
+app.use('/ldap', LDAPRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

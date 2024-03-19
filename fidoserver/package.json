@@ -17,6 +17,7 @@
     "fido2-lib": "^3.4.3",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "ldapjs": "^3.0.7",
     "mariadb": "^3.2.3",
     "morgan": "~1.9.1",
     "node-json-db": "^2.3.0",

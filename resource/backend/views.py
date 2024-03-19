@@ -120,8 +120,7 @@ class VerifyViewSet(APIView):
             print(decode_data)
         except:
             return Response({"Error": "token解密失敗"}, status=status.HTTP_400_BAD_REQUEST)
-        # 驗簽
-        try : 
+       
             
             
            
@@ -135,7 +134,9 @@ class VerifyViewSet(APIView):
 
             
           #  jwks = requests.get('https://kong.ztaenv.duckdns.org/keycloak/realms/react-keycloak/protocol/openid-connect/certs').json()["keys"][1]
-
+         # 驗簽
+        
+        try : 
             jwks_client = PyJWKClient('https://kong.ztaenv.duckdns.org/keycloak/realms/react-keycloak/protocol/openid-connect/certs')
             signing_key = jwks_client.get_signing_key_from_jwt(access_token)
             
@@ -145,8 +146,8 @@ class VerifyViewSet(APIView):
             return Response(decoded_token, status=status.HTTP_201_CREATED)
         except jwt.ExpiredSignatureError:
             return Response({"Error": "token已過期"}, status=status.HTTP_400_BAD_REQUEST)
-        #except jwt.InvalidTokenError :
-        #    return Response({"Error": "token無效"}, status=status.HTTP_400_BAD_REQUEST)
+        except jwt.InvalidTokenError :
+            return Response({"Error": "token無效"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ScoreViewSet(APIView):
