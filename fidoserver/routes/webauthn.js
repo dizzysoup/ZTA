@@ -58,7 +58,7 @@ router.post('/register', async function(req, res) {
 	console.log(chk.length);
 	if(chk.length == 0 ){
 		await con.query("INSERT INTO user values(?,?)" , [username,id]);
-		await con.query('INSERT INTO  credentials(id, publicKey,algorithm) values(?,?,?);', [id,publicKey,algorithm]);
+		await con.query('INSERT INTO  credentials(id, publicKey,algo) values(?,?,?);', [id,publicKey,algorithm]);
 		const rows = await con.query("select *from credentials");
 		res.send(registrationParsed);
 
@@ -97,7 +97,7 @@ router.post("/login", async (req, res) => {
 	const credentialKey  = {
 		id : rows[0].id ,
 		publicKey : rows[0].publicKey , 
-		algorithm : rows[0].algorithm
+		algorithm : rows[0].algo
 	}
 	
 	

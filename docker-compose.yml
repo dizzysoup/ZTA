@@ -14,6 +14,7 @@ volumes:
   keycloak-datastore:
 
 services:
+
   kong-db:
     image: postgres:11-alpine
     container_name: kong_db
@@ -231,5 +232,7 @@ services:
       - ./source/data:/var/lib/mysql  # Persistent data volume
       - ./source/init.sql:/docker-entrypoint-initdb.d/init.sql  # Initialization script
 
+
+  
   
   

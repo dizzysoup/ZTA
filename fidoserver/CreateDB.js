@@ -1,4 +1,4 @@
-var express = require('express');
+import express from 'express';
 var app = express();
 const file = './user.db';
 var sqlite3 = require('sqlite3').verbose();

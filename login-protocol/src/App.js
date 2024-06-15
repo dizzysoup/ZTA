@@ -18,8 +18,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={{account,Setaccount,password,Setpassword}}>
-      <BrowserRouter>      
-        <h1> Mobile :  {device}</h1>
+      <BrowserRouter>              
         <Routes>         
           <Route path="/" element={<LoginPage />} />
           <Route path="/Home" element={<HomePage />} />

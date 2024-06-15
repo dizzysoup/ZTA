@@ -18,7 +18,7 @@ import mariadb from 'mariadb'
 //const mariadb = require('mariadb');
 
 const pool = mariadb.createConnection({
-    host: '172.22.0.4',
+    host: '172.22.0.2',
     user: 'root',
     password: 'root',
     database: 'fidodb'
